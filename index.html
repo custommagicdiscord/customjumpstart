@@ -603,11 +603,11 @@ decklistArray[11] =
 			
 			// Randomly picks two card faces
 			
-			var firstRandom = document.getElementById('button' + (1 + Math.floor(Math.random() * 11)));
-			var secondRandom = document.getElementById('button' + (1 + Math.floor(Math.random() * 11)));
+			var firstRandom = document.getElementById('button' + (1 + Math.floor(Math.random() * 12)));
+			var secondRandom = document.getElementById('button' + (1 + Math.floor(Math.random() * 12)));
 	
 			while (secondRandom == firstRandom) { // Keep rerolling the second choice until it's different than the first
-				secondRandom = document.getElementById('button' + (1 + Math.floor(Math.random() * 11)));
+				secondRandom = document.getElementById('button' + (1 + Math.floor(Math.random() * 12)));
 			}
 			
 			// Clear the previous two choices
@@ -725,6 +725,9 @@ decklistArray[11] =
 				case button11:
 					firstName = "Sleepyheads";
 					break
+				case button12:
+					firstName = "Gifts of the Season";
+					break
 			}
 			switch (buttonArray[1]) {
 				case button1:
@@ -759,6 +762,9 @@ decklistArray[11] =
 					break
 				case button11:
 					secondName = "Sleepyheads";
+					break
+				case button12:
+					firstName = "Gifts of the Season";
 					break
 			}
 			
@@ -1065,5 +1071,6 @@ decklistArray[11] =
 </body>
 
 </html>
+
 
 
