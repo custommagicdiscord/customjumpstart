@@ -255,12 +255,12 @@
 	<tr style="height:12.5%">
 		<td colspan="3">
 			<div class="headerContainer">
-				<h1 class="headerText" align="center">Select two Jumpstart packs to compile</h1>
+				<h1 class="headerText">Select two Jumpstart packs to compile</h1>
 			</div>
 		</td>
 	</tr>
 	
-	<tr class="middleRow" style="height:75%">
+	<tr class="middleRow" style="height:50%">
 		<td class="leftCol">
 			<button class="aboutTab" onclick="compilerLink('Vault AboutPage.html')">
 				<a class="aboutTabText" onclick="compilerLink('Vault AboutPage.html')">ABOUT</a>
@@ -279,7 +279,7 @@
 			</button>
 		</td>
 		<td class="middleCol">
-			<table class="imageGrid" style="solid black;margin-left:auto;margin-right:auto;">
+			<table class="imageGrid" style="margin-left:auto;margin-right:auto;">
 				<tr>
 					<td class="tableCell">
 					<button class="buttonButton" type="button" onclick="borderFcn(button1,false)" onmouseover="hoverFcn(button1,1)" onmouseleave="hoverFcn(button1,2)">
@@ -311,37 +311,42 @@
 						<img id="button6" class="buttonImg" src="THIRST.png">
 					</button>
 					</td>
+					<td class="tableCell">
+					<button class="buttonButton" type="button" onclick="borderFcn(button7,false)" onmouseover="hoverFcn(button7,1)" onmouseleave="hoverFcn(button7,2)">
+						<img id="button7" class="buttonImg" src="LOVE IS IN THE AIR.jpg">
+					</button>
+					</td>
 				</tr>
 				
 				<tr>
 					<td class="tableCell">
-					<button class="buttonButton" type="button" onclick="borderFcn(button7,false)" onmouseover="hoverFcn(button7,1)" onmouseleave="hoverFcn(button7,2)">
-						<img id="button7" class="buttonImg" src="EARLY BIRDS.png">
-					</button>
-					</td>
-					<td class="tableCell">
 					<button class="buttonButton" type="button" onclick="borderFcn(button8,false)" onmouseover="hoverFcn(button8,1)" onmouseleave="hoverFcn(button8,2)">
-						<img id="button8" class="buttonImg" src="TIME TURNERS.png">
+						<img id="button8" class="buttonImg" src="EARLY BIRDS.png">
 					</button>
 					</td>
 					<td class="tableCell">
 					<button class="buttonButton" type="button" onclick="borderFcn(button9,false)" onmouseover="hoverFcn(button9,1)" onmouseleave="hoverFcn(button9,2)">
-						<img id="button9" class="buttonImg" src="NIGHT OWLS.png">
+						<img id="button9" class="buttonImg" src="TIME TURNERS.png">
 					</button>
 					</td>
 					<td class="tableCell">
 					<button class="buttonButton" type="button" onclick="borderFcn(button10,false)" onmouseover="hoverFcn(button10,1)" onmouseleave="hoverFcn(button10,2)">
-						<img id="button10" class="buttonImg" src="GIFT OF GIVING.png">
+						<img id="button10" class="buttonImg" src="NIGHT OWLS.png">
 					</button>
 					</td>
 					<td class="tableCell">
 					<button class="buttonButton" type="button" onclick="borderFcn(button11,false)" onmouseover="hoverFcn(button11,1)" onmouseleave="hoverFcn(button11,2)">
-						<img id="button11" class="buttonImg" src="SLEEPYHEADS.png">
+						<img id="button11" class="buttonImg" src="GIFT OF GIVING.png">
 					</button>
 					</td>
 					<td class="tableCell">
 					<button class="buttonButton" type="button" onclick="borderFcn(button12,false)" onmouseover="hoverFcn(button12,1)" onmouseleave="hoverFcn(button12,2)">
-						<img id="button12" class="buttonImg" src="GIFTS OF THE SEASON.png">
+						<img id="button12" class="buttonImg" src="SLEEPYHEADS.png">
+					</button>
+					</td>
+					<td class="tableCell">
+					<button class="buttonButton" type="button" onclick="borderFcn(button13,false)" onmouseover="hoverFcn(button13,1)" onmouseleave="hoverFcn(button13,2)">
+						<img id="button13" class="buttonImg" src="GIFTS OF THE SEASON.png">
 					</button>
 					</td>
 				</tr>
@@ -589,6 +594,22 @@ decklistArray[11] =
 	<card number="1" name="Donner, Heavyweight"/>
 	<card number="1" name="Thriving Market"/>
 	<card number="7" name="Snow-Covered Forest"/>`;
+
+decklistArray[12] =
+`	<card number="1" name="Heartseeker"/>
+	<card number="1" name="Rose Knight"/>
+	<card number="1" name="Unrequited Crush"/>
+	<card number="1" name="Newlyweds"/>
+	<card number="1" name="Loves-Me-Not"/>
+	<card number="1" name="Romantic Spark"/>
+	<card number="1" name="Heavenly Matchmaker"/>
+	<card number="1" name="Inseparable Lovers"/>
+	<card number="1" name="Crime of Passion"/>
+	<card number="1" name="Lovestruck Angel"/>
+	<card number="1" name="Dipuc's Bow"/>
+	<card number="1" name="Dipuc, Mad Matchmaker"/>
+	<card number="1" name="Thriving Bluff"/>
+	<card number="7" name="Mountain"/>`;
 	
 	var selectedCount = 0;
 	var buttonArray = [];
@@ -603,11 +624,11 @@ decklistArray[11] =
 			
 			// Randomly picks two card faces
 			
-			var firstRandom = document.getElementById('button' + (1 + Math.floor(Math.random() * 12)));
-			var secondRandom = document.getElementById('button' + (1 + Math.floor(Math.random() * 12)));
+			var firstRandom = document.getElementById('button' + (1 + Math.floor(Math.random() * decklistArray.length)));
+			var secondRandom = document.getElementById('button' + (1 + Math.floor(Math.random() * decklistArray.length)));
 	
 			while (secondRandom == firstRandom) { // Keep rerolling the second choice until it's different than the first
-				secondRandom = document.getElementById('button' + (1 + Math.floor(Math.random() * 12)));
+				secondRandom = document.getElementById('button' + (1 + Math.floor(Math.random() * decklistArray.length)));
 			}
 			
 			// Clear the previous two choices
@@ -728,6 +749,9 @@ decklistArray[11] =
 				case button12:
 					firstName = "Gifts of the Season";
 					break
+				case button13:
+					firstName = "Love is in the Air";
+					break
 			}
 			switch (buttonArray[1]) {
 				case button1:
@@ -765,6 +789,9 @@ decklistArray[11] =
 					break
 				case button12:
 					firstName = "Gifts of the Season";
+					break
+				case button13:
+					firstName = "Love is in the Air";
 					break
 			}
 			
@@ -826,7 +853,7 @@ decklistArray[11] =
 	  // Set pack heights
       const buttonButtons = document.querySelectorAll('.buttonButton');
 	  const monitorHeight = window.innerHeight;
-	  const buttonHeight = monitorHeight * 0.35;
+	  const buttonHeight = monitorHeight * 0.315;
       buttonButtons.forEach(function(buttonButton) {
 		buttonButton.style.height = `${buttonHeight}px`;
 	  });
