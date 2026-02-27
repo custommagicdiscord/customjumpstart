@@ -255,12 +255,12 @@
 	<tr style="height:12.5%">
 		<td colspan="3">
 			<div class="headerContainer">
-				<h1 class="headerText" align="center">Select two Jumpstart packs to compile</h1>
+				<h1 class="headerText">Select two Jumpstart packs to compile</h1>
 			</div>
 		</td>
 	</tr>
 	
-	<tr class="middleRow" style="height:75%">
+	<tr class="middleRow" style="height:50%">
 		<td class="leftCol">
 			<button class="aboutTab" onclick="compilerLink('Vault AboutPage.html')">
 				<a class="aboutTabText" onclick="compilerLink('Vault AboutPage.html')">ABOUT</a>
@@ -279,7 +279,7 @@
 			</button>
 		</td>
 		<td class="middleCol">
-			<table class="imageGrid" style="solid black;margin-left:auto;margin-right:auto;">
+			<table class="imageGrid" style="margin-left:auto;margin-right:auto;">
 				<tr>
 					<td class="tableCell">
 					<button class="buttonButton" type="button" onclick="borderFcn(button1,false)" onmouseover="hoverFcn(button1,1)" onmouseleave="hoverFcn(button1,2)">
@@ -313,7 +313,7 @@
 					</td>
 					<td class="tableCell">
 					<button class="buttonButton" type="button" onclick="borderFcn(button7,false)" onmouseover="hoverFcn(button7,1)" onmouseleave="hoverFcn(button7,2)">
-						<img id="button7" class="buttonImg" src="LOVE IS IN THE AIR.png">
+						<img id="button7" class="buttonImg" src="LOVE IS IN THE AIR.jpg">
 					</button>
 					</td>
 				</tr>
@@ -853,7 +853,7 @@ decklistArray[12] =
 	  // Set pack heights
       const buttonButtons = document.querySelectorAll('.buttonButton');
 	  const monitorHeight = window.innerHeight;
-	  const buttonHeight = monitorHeight * 0.35;
+	  const buttonHeight = monitorHeight * 0.315;
       buttonButtons.forEach(function(buttonButton) {
 		buttonButton.style.height = `${buttonHeight}px`;
 	  });
